@@ -1,0 +1,35 @@
+{
+    "name": "adilsurve/favicongenerator",
+    "description": "A project using WideImage and PHP-ICO for image manipulation and ICO generation.",
+    "version": "1.0.0",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Adil Surve",
+            "homepage": "http://yourwebsite.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4", 
+        "smottt/wideimage": "^1.1",
+        "chrisjean/php-ico": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "WideImage\\": "lib/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/smottt/WideImage"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/chrisbliss18/php-ico"
+        }
+    ]
+}
