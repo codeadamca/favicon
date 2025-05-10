@@ -1,14 +1,8 @@
 <?php
-session_start(); // Ensure session is started at the beginning
-$page_title = "Upload"; // Set the page title
-ob_start(); // Start output buffering
-?>
 
-<?php
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+session_start();
+$page_title = "Upload";
+ob_start();
 
 require __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/vendor/chrisjean/php-ico/class-php-ico.php';
@@ -26,10 +20,12 @@ $action = $_POST['action'] ?? '';
 
 // Ensure `uploads/` and `favicons/` directories exist
 if (!file_exists($uploadDirectory)) {
-    mkdir($uploadDirectory, 0777, true);
+    // mkdir($uploadDirectory, 0777, true);
+    die('111');
 }
 if (!file_exists($faviconsDirectory)) {
-    mkdir($faviconsDirectory, 0777, true);
+    // mkdir($faviconsDirectory, 0777, true);
+    die('222');
 }
 
 // Get the last uploaded file from session
